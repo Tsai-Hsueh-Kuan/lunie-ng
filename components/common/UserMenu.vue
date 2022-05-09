@@ -26,6 +26,11 @@ export default {
   computed: {
     ...mapState(['session']),
   },
+  mounted() {
+    alert(
+      'LikeCoin chain is being upgraded. During this period, some services may be affected until the upgrade is completed.'
+    )
+  },
   methods: {
     signOut() {
       this.$router.push('/welcome')

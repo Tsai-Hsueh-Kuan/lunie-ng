@@ -33,7 +33,6 @@ const changeAddressPrefix = (address, newPrefix) => {
   const { words } = bech32.decode(address)
   return bech32.encode(newPrefix, words)
 }
-
 const getAllowedAddress = (originAddress) => {
   return network.default.allowedAddressPrefix.map((x) =>
     changeAddressPrefix(originAddress, x)
